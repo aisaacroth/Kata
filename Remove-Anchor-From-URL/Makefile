@@ -1,3 +1,10 @@
+.PHONY: compile
+default:
+	javac Java/*.java
+
 .PHONY: clean
 clean:
-	rm Python/*.pyc rm Java/*.class *~
+	rm -f Python/*.pyc rm Java/*.class *~
+
+.PHONY: all
+all: clean compile
